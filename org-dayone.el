@@ -46,14 +46,7 @@ If nil, photos will not be added to imported entries.")
 Generated properties will be named like: `DAYONE_COLUMNNAME'.")
 
 (defvar org-dayone-property-generators
-  `(("SOURCE" . (lambda (_entry) "Day One"))
-    ;; DEBUG: example
-    ("ADDRESS" . (lambda (entry)
-                   (format "%s, %s, %s, %s"
-                           (gethash "placeName" entry)
-                           (gethash "localityName" entry)
-                           (gethash "administrativeArea" entry)
-                           (gethash "country" entry)))))
+  `(("SOURCE" . (lambda (_entry) "Day One")))
   "Alist of custom Org property generators.
 
 Keys are property names, values are 1-arity functions which take
